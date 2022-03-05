@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+
+%including document packages
+\usepackage{graphicx} %packages to include figures and plot%
+\usepackage{abstract} %identifying abstract in document%
+\usepackage{multicol} %using multicolumn arrangements in document%
+%\usepackage{lipsum}% %lorem ipsum generator%
+\usepackage{natbib} %using parenthetical apa citation. this does not come native with latex%
+\usepackage{float} % explicitly place figure in multicolumn environment%
+%document details%
+
+
+\begin{document}
+
+    %document details%
+    \title{The way of the \LaTeX}
+    \author{Victor, Ezekiel}
+    \date{2022-03-05}
+
+    \maketitle % make the document details
+
+    \begin{abstract}
+        This is the \LaTeX course from Caltech 2018. Thank you.
+        %\lipsum*[2]%
+    \end{abstract}
+
+    \begin{multicols}{2}   
+        \section{\LaTeX}
+        This is \LaTeX
+    
+        \begin{equation}
+            \label{eq:favequation}
+            E = m \cdot c^2
+        \end{equation}
+        As part of a paragraph $E = m \cdot c^2$ \citep{article2}. I have fully labeled my favorite equation \ref{eq:favequation}. Below is an image from a project I didn't like Figure \ref{fig:dislike}.
+        \begin{center}
+            \begin{figure}[H]
+                \caption{This is the image I did not like}
+                \label{fig:dislike}
+                \includegraphics{Picture3.png}
+            \end{figure}
+        \end{center}
+    
+
+    \bibliography{main}
+    \bibliographystyle{apalike}
+    \end{multicols}
+\end{document}
